@@ -1,14 +1,9 @@
+import {inject, observer} from 'mobx-react';
 import React from 'react';
-import {View, Text, Modal} from 'react-native';
-import PropTypes from 'prop-types';
+import RootNavigation from './navigations';
 
-const App = ({}) => {
-  return (
-    <View>
-      <Text>App</Text>
-    </View>
-  );
+const App = () => {
+  return <RootNavigation />;
 };
 
-App.propTypes = {};
-export default React.memo(App);
+export default inject('RootStore')(observer(App));

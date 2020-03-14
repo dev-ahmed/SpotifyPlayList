@@ -1,4 +1,12 @@
+import Main from './src';
 import React from 'react';
-import App from './src';
+import {RootStore} from './src/models/Store';
+import {Provider} from 'mobx-react';
+
+const App = () => (
+  <Provider RootStore={RootStore}>
+    <Main />
+  </Provider>
+);
 
 export default App;
